@@ -1,0 +1,47 @@
+{
+  "name": "nx-remotecache-minio",
+  "version": "0.0.1",
+  "description": "Remote caching for @nrwl/nx using Minio Storage",
+  "main": "index.js",
+  "typings": "index.d.ts",
+  "scripts": {
+    "build": "rm -rf dist && tsc && cp package.json dist/package.json && cp README.md dist/README.md && cp CHANGELOG.md dist/CHANGELOG.md",
+    "release": "npm run build && cd dist && npm publish && cd ..",
+    "local-release": "npm run build && cd dist && npm publish --registry=http://localhost:4873/ && cd ..",
+    "link": "npm run build && cd dist && npm link && cd .."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NiklasPor/nx-remotecache-minio.git"
+  },
+  "keywords": [
+    "nx",
+    "remote",
+    "cache",
+    "remotecache",
+    "minio",
+    "object storage",
+    "storage",
+    "angular",
+    "typescript"
+  ],
+  "author": "Niklas Portmann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/NiklasPor/nx-remotecache-minio/issues"
+  },
+  "homepage": "https://github.com/NiklasPor/nx-remotecache-minio#readme",
+  "devDependencies": {
+    "@nrwl/workspace": "^11.1.1",
+    "@types/adm-zip": "^0.4.34",
+    "@types/minio": "^7.0.11",
+    "@types/yargs": "^16.0.1",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.5",
+    "chalk": "^4.1.0",
+    "minio": "^7.0.19",
+    "nx-remotecache-custom": "^1.0.0"
+  }
+}
