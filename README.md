@@ -14,10 +14,10 @@ npm install --save-dev nx-remotecache-minio
 
 | Parameter  | Description                                                             |  Environment Variable / .env | `nx.json`   |
 | ---------- | ----------------------------------------------------------------------- | ---------------------------- | ----------- |
-| Access Key | Connect to an Azure Storage blob via a single URL.                      | `NX_CACHE_MINIO_ACCESS_KEY`  | `accessKey` |
-| Secret Key | Use together with Account Key for Azure Credentials Authentication      | `NX_CACHE_MINIO_SECRET_KEY`  | `secretKey` |
-| URL        | Use together with Account Name for Azure Credentials Authentication     | `NX_CACHE_MINIO_URL`         | `url`       |
-| Bucket     | Required. Specify which container should be used for storing the cache. | `NX_CACHE_AZURE_CONTAINER`   | `bucket`    |
+| Access Key | Connect to an MinIO Storage blob via a single URL.                      | `NX_CACHE_MINIO_ACCESS_KEY`  | `accessKey` |
+| Secret Key | Use together with Account Key for MinIO Credentials Authentication      | `NX_CACHE_MINIO_SECRET_KEY`  | `secretKey` |
+| URL        | Use together with Account Name for MinIO Credentials Authentication     | `NX_CACHE_MINIO_URL`         | `url`       |
+| Bucket     | Required. Specify which container should be used for storing the cache. | `NX_CACHE_MINIO_CONTAINER`   | `bucket`    |
 
 ```json
 {
