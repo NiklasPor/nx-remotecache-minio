@@ -11,6 +11,7 @@ const ENV_URL = "NX_CACHE_MINIO_URL";
 const ENV_ACCESS_KEY = "NX_CACHE_MINIO_ACCESS_KEY";
 const ENV_SECRET_KEY = "NX_CACHE_MINIO_SECRET_KEY";
 const ENV_BUCKET = "NX_CACHE_MINIO_BUCKET";
+const ENV_REGION = "NX_CACHE_MINIO_REGION";
 
 const getEnv = (key: string) => process.env[key];
 
@@ -19,6 +20,7 @@ interface MinioRunnerOptions {
   secretKey: string;
   accessKey: string;
   bucket: string;
+  region?: string;
 }
 
 function getClient(options: CustomRunnerOptions<MinioRunnerOptions>): Client {
@@ -30,6 +32,7 @@ function getClient(options: CustomRunnerOptions<MinioRunnerOptions>): Client {
     useSSL: url.protocol === "https:",
     accessKey: getEnv(ENV_ACCESS_KEY) ?? options.accessKey,
     secretKey: getEnv(ENV_SECRET_KEY) ?? options.secretKey,
+    region: getEnv(ENV_REGION) ?? options.region,
   });
 }
 
