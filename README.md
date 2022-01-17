@@ -18,6 +18,7 @@ npm install --save-dev nx-remotecache-minio
 | Secret Key | Use together with Account Key for MinIO Credentials Authentication      | `NX_CACHE_MINIO_SECRET_KEY`  | `secretKey` |
 | URL        | Use together with Account Name for MinIO Credentials Authentication     | `NX_CACHE_MINIO_URL`         | `url`       |
 | Bucket     | Required. Specify which container should be used for storing the cache. | `NX_CACHE_MINIO_CONTAINER`   | `bucket`    |
+| Region     | Optional. Specify the location of the storage e.g. "us-west-1".         | `NX_CACHE_MINIO_REGION`      | `region`    |
 
 ```json
 {
@@ -30,6 +31,7 @@ npm install --save-dev nx-remotecache-minio
         "secretKey": "minioadmin",
         "url": "http://192.168.0.221:9000",
         "bucket": "nx-cache",
+        "region": "us-west-1", // optional
         "cacheableOperations": ["build", "test", "lint", "e2e"]
       }
     }
