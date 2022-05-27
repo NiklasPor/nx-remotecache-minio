@@ -4,7 +4,7 @@
 
 A task runner for [@nrwl/nx](https://nx.dev/react) that uses an Minio Storage as a remote cache. This enables all team members and CI servers to share a single cache. The concept and benefits of [computation caching](https://nx.dev/angular/guides/computation-caching) are explained in the NX documentation.
 
-This package was built with [nx-remotecache-custom](https://www.npmjs.com/package/nx-remotecache-minio) 🙌
+This package was built with [nx-remotecache-custom](https://www.npmjs.com/package/nx-remotecache-custom) 🙌
 
 ## Setup
 
