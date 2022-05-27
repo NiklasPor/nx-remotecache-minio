@@ -1,11 +1,10 @@
+import { Client } from "minio";
 import {
   createCustomRunner,
   CustomRunnerOptions,
   initEnv,
   RemoteCacheImplementation,
 } from "nx-remotecache-custom";
-import { Client } from "minio";
-import { Stream } from "stream";
 
 const ENV_URL = "NX_CACHE_MINIO_URL";
 const ENV_ACCESS_KEY = "NX_CACHE_MINIO_ACCESS_KEY";
@@ -36,18 +35,7 @@ function getClient(options: CustomRunnerOptions<MinioRunnerOptions>): Client {
   });
 }
 
-// https://stackoverflow.com/questions/14269233/node-js-how-to-read-a-stream-into-a-buffer
-async function streamTobuffer(stream: Stream): Promise<Buffer> {
-  return new Promise<Buffer>((resolve, reject) => {
-    const buffer = new Array();
-
-    stream.on("data", (chunk) => buffer.push(chunk));
-    stream.on("end", () => resolve(Buffer.concat(buffer)));
-    stream.on("error", (err) => reject(err));
-  });
-}
-
-export default createCustomRunner<MinioRunnerOptions>(
+const runner: unknown = createCustomRunner<MinioRunnerOptions>(
   async (options): Promise<RemoteCacheImplementation> => {
     initEnv(options);
 
@@ -64,12 +52,11 @@ export default createCustomRunner<MinioRunnerOptions>(
           return false;
         }
       },
-      retrieveFile: async (filename) => {
-        const result = await client.getObject(bucket, filename);
-        return streamTobuffer(result);
-      },
-      storeFile: (filename, buffer) =>
-        client.putObject(bucket, filename, buffer),
+      retrieveFile: (filename) => client.getObject(bucket, filename),
+      storeFile: (filename, stream) =>
+        client.putObject(bucket, filename, stream),
     };
   }
 );
+
+export default runner;
