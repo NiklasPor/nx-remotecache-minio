@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 3.0.0
+
+### Breaking Changes
+
+- Environment variables now start with `NXCACHE_` instead of `NX_CACHE_` to prevent leaking credentials
+
 ## 2.0.0
 
 ### Breaking Changes
@@ -15,7 +21,7 @@ This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.htm
 
 ### Added
 
-- Added `name` task runner option and `NX_CACHE_NAME` env variable to set a custom cache name
+- Added `name` task runner option and `NXCACHE_NAME` env variable to set a custom cache name
 
 # 1.1.0
 
