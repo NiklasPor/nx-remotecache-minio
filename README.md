@@ -14,11 +14,11 @@ npm install --save-dev nx-remotecache-minio
 
 | Parameter  | Description                                                             |  Environment Variable / .env | `nx.json`   |
 | ---------- | ----------------------------------------------------------------------- | ---------------------------- | ----------- |
-| Access Key | Connect to an MinIO Storage blob via a single URL.                      | `NX_CACHE_MINIO_ACCESS_KEY`  | `accessKey` |
-| Secret Key | Use together with Account Key for MinIO Credentials Authentication      | `NX_CACHE_MINIO_SECRET_KEY`  | `secretKey` |
-| URL        | Use together with Account Name for MinIO Credentials Authentication     | `NX_CACHE_MINIO_URL`         | `url`       |
-| Bucket     | Required. Specify which container should be used for storing the cache. | `NX_CACHE_MINIO_CONTAINER`   | `bucket`    |
-| Region     | Optional. Specify the location of the storage e.g. "us-west-1".         | `NX_CACHE_MINIO_REGION`      | `region`    |
+| Access Key | Connect to an MinIO Storage blob via a single URL.                      | `NXCACHE_MINIO_ACCESS_KEY`   | `accessKey` |
+| Secret Key | Use together with Account Key for MinIO Credentials Authentication      | `NXCACHE_MINIO_SECRET_KEY`   | `secretKey` |
+| URL        | Use together with Account Name for MinIO Credentials Authentication     | `NXCACHE_MINIO_URL`          | `url`       |
+| Bucket     | Required. Specify which container should be used for storing the cache. | `NXCACHE_MINIO_CONTAINER`    | `bucket`    |
+| Region     | Optional. Specify the location of the storage e.g. "us-west-1".         | `NXCACHE_MINIO_REGION`       | `region`    |
 
 ```json
 {
@@ -59,7 +59,7 @@ Hash: d3d2bea71ea0f3004304c5cc88cf91be50b02bb636ebbdfcc927626fd8edf1ae
 
 | Option       | Environment Variable / .env | Description                                                                                           |
 | ------------ | --------------------------- | ----------------------------------------------------------------------------------------------------- |
-| `name`       | `NX_CACHE_NAME`             | Set to provide task runner name for logging. Overrides name provided in implementation.               |
+| `name`       | `NXCACHE_NAME`              | Set to provide task runner name for logging. Overrides name provided in implementation.               |
 | `verbose`    |                             | Set to receive full stack traces whenever errors occur. Best used for debugging. **Default:** `false` |
 | `silent`     |                             | Set to mute success and info logs. **Default:** `false`                                               |
 | `dotenv`     |                             | Set to `false` to disable reading `.env` into `process.env`. **Default:** `true`                      |

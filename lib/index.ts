@@ -6,11 +6,11 @@ import {
   RemoteCacheImplementation,
 } from "nx-remotecache-custom";
 
-const ENV_URL = "NX_CACHE_MINIO_URL";
-const ENV_ACCESS_KEY = "NX_CACHE_MINIO_ACCESS_KEY";
-const ENV_SECRET_KEY = "NX_CACHE_MINIO_SECRET_KEY";
-const ENV_BUCKET = "NX_CACHE_MINIO_BUCKET";
-const ENV_REGION = "NX_CACHE_MINIO_REGION";
+const ENV_URL = "NXCACHE_MINIO_URL";
+const ENV_ACCESS_KEY = "NXCACHE_MINIO_ACCESS_KEY";
+const ENV_SECRET_KEY = "NXCACHE_MINIO_SECRET_KEY";
+const ENV_BUCKET = "NXCACHE_MINIO_BUCKET";
+const ENV_REGION = "NXCACHE_MINIO_REGION";
 
 const getEnv = (key: string) => process.env[key];
 
