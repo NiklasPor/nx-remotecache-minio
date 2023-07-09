@@ -1,6 +1,6 @@
 {
   "name": "nx-remotecache-minio",
-  "version": "4.0.0",
+  "version": "4.1.0",
   "description": "Remote caching for @nrwl/nx using Minio Storage",
   "main": "index.js",
   "typings": "index.d.ts",
@@ -38,7 +38,7 @@
   },
   "dependencies": {
     "minio": "^7.0.32",
-    "nx-remotecache-custom": "^4.0.0"
+    "nx-remotecache-custom": "^4.1.0"
   },
   "peerDependencies": {
     "@nx/workspace": ">=16.0.0"
