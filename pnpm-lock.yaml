@@ -9,8 +9,8 @@ dependencies:
     specifier: ^7.1.1
     version: 7.1.1
   nx-remotecache-custom:
-    specifier: ^5.0.0
-    version: 5.0.0(@nx/workspace@16.9.0)
+    specifier: ^5.0.1
+    version: 5.0.1(@nx/workspace@16.9.0)
 
 devDependencies:
   '@nx/workspace':
@@ -52,6 +52,13 @@ packages:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.15.0
 
+  /@nrwl/devkit@16.6.0(nx@16.6.0):
+    resolution: {integrity: sha512-xZEN6wfA1uJwv+FVRQFOHsCcpvGvIYGx2zutbzungDodWkfzlJ3tzIGqYjIpPCBVT83erM6Gscnka2W46AuKfA==}
+    dependencies:
+      '@nx/devkit': 16.6.0(nx@16.6.0)
+    transitivePeerDependencies:
+      - nx
+
   /@nrwl/devkit@16.6.0(nx@16.9.0):
     resolution: {integrity: sha512-xZEN6wfA1uJwv+FVRQFOHsCcpvGvIYGx2zutbzungDodWkfzlJ3tzIGqYjIpPCBVT83erM6Gscnka2W46AuKfA==}
     dependencies:
@@ -84,7 +91,7 @@ packages:
     peerDependencies:
       nx: '>= 15 <= 17'
     dependencies:
-      '@nrwl/devkit': 16.6.0(nx@16.9.0)
+      '@nrwl/devkit': 16.6.0(nx@16.6.0)
       ejs: 3.1.9
       ignore: 5.2.4
       nx: 16.6.0
@@ -1007,8 +1014,8 @@ packages:
     dependencies:
       path-key: 3.1.1
 
-  /nx-remotecache-custom@5.0.0(@nx/workspace@16.9.0):
-    resolution: {integrity: sha512-+NKt2yn6Il5l7b1rXnzVJX0mqSAwa7b7allsuy/GEUzBMOzDOtEFmsLak9mCtOYAjeknS53gGHBnsHVF1imbhA==}
+  /nx-remotecache-custom@5.0.1(@nx/workspace@16.9.0):
+    resolution: {integrity: sha512-UgvsnVp4iuQ3hmLdUilzS4bEYfe8kNB8sf9LFk3v9A7iBUy/uUuHmN23SuHlAslq0q5jBb9l3/7TIzRK345NYw==}
     peerDependencies:
       '@nx/workspace': '>=16.9.0'
     dependencies:
