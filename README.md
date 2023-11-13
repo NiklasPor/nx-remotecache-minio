@@ -20,12 +20,13 @@ npm install --save-dev nx-remotecache-minio
 ```
 
 | Parameter  | Description                                                             |  Environment Variable / .env | `nx.json`   |
-| ---------- | ----------------------------------------------------------------------- | ---------------------------- | ----------- |
+| ---------- |-------------------------------------------------------------------------| ---------------------------- | ----------- |
 | Access Key | Connect to an MinIO Storage blob via a single URL.                      | `NXCACHE_MINIO_ACCESS_KEY`   | `accessKey` |
 | Secret Key | Use together with Account Key for MinIO Credentials Authentication      | `NXCACHE_MINIO_SECRET_KEY`   | `secretKey` |
 | URL        | Use together with Account Name for MinIO Credentials Authentication     | `NXCACHE_MINIO_URL`          | `url`       |
 | Bucket     | Required. Specify which container should be used for storing the cache. | `NXCACHE_MINIO_BUCKET`       | `bucket`    |
 | Region     | Optional. Specify the location of the storage e.g. "us-west-1".         | `NXCACHE_MINIO_REGION`       | `region`    |
+| PathStyle  | Optional. Set to `false` to use virtual host style.                     | `NXCACHE_MINIO_PATH_STYLE`   | `pathStyle` |
 
 ```json
 {
