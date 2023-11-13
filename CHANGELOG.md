@@ -3,6 +3,21 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## 17.0.0
+
+### Breaking Change
+
+- Major versioning is now synced to nx.
+- Nx support now starts at `17.0.0`.
+
+### Added
+
+- Users can now set `pathStyle` to `false` for non AWS endpoints. Thanks to [Zeeko](https://github.com/ZeekoZhu).
+
+### Fixed
+
+- Nx dev/peer dependency switched from `@nx/workspace` to `nx`. Fixes [#27](https://github.com/NiklasPor/nx-remotecache-custom/issues/27).
+
 ## 5.0.1
 
 ### Fixed
