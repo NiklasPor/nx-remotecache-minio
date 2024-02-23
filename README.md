@@ -9,10 +9,12 @@ This package was built with [nx-remotecache-custom](https://www.npmjs.com/packag
 
 ## Compatability
 
-|  Nx        | Remote Cache |
-| ---------- | ------------ |
-|  >= 16.9.0 |  >= 5.0.0    |
-|  < 16.9.0  |  < 5.0.0     |
+|  Nx               | Remote Cache     |
+| ----------------- | ---------------- |
+|  `>= 18.0.0 < 19` | `>= 18.0.0 < 19` |
+|  `>= 17.0.0 < 18` | `>= 17.0.0 < 18` |
+|  `>= 16.9.0 < 17` |  `>= 5.0.0 < 17` |
+|  `< 16.9.0`       |  `< 5.0.0`       |
 
 ## Setup
 
@@ -21,7 +23,7 @@ npm install --save-dev nx-remotecache-minio
 ```
 
 | Parameter  | Description                                                             |  Environment Variable / .env | `nx.json`   |
-| ---------- |-------------------------------------------------------------------------| ---------------------------- | ----------- |
+| ---------- | ----------------------------------------------------------------------- | ---------------------------- | ----------- |
 | Access Key | Connect to an MinIO Storage blob via a single URL.                      | `NXCACHE_MINIO_ACCESS_KEY`   | `accessKey` |
 | Secret Key | Use together with Account Key for MinIO Credentials Authentication      | `NXCACHE_MINIO_SECRET_KEY`   | `secretKey` |
 | URL        | Use together with Account Name for MinIO Credentials Authentication     | `NXCACHE_MINIO_URL`          | `url`       |
